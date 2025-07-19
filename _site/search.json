@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "",
+    "text": "My name is Betsabé Cohen I’m a sociologist and data analyst from Buenos Aires Argentina I’m …."
+  },
+  {
+    "objectID": "slides.html#hello-hola",
+    "href": "slides.html#hello-hola",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Hello/ Hola!",
+    "text": "Hello/ Hola!\nMy name is Betsabé Cohen I’m a sociologist and data analyst from Buenos Aires Argentina I’m …."
+  },
+  {
+    "objectID": "slides.html#agenda",
+    "href": "slides.html#agenda",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Agenda",
+    "text": "Agenda\n\nWhy Reproducibility?\nWhat is Quarto?\nCore Use Cases\nAcademic Production with Quarto Manuscripts\nTips on Practical Reproducibility: GitHub Integration\nHands-on Coding\nLearning More & Getting Involved"
+  },
+  {
+    "objectID": "slides.html#what-do-we-mean-by-reproductibility",
+    "href": "slides.html#what-do-we-mean-by-reproductibility",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "What do we mean by reproductibility",
+    "text": "What do we mean by reproductibility"
+  },
+  {
+    "objectID": "slides.html#reporductible-code",
+    "href": "slides.html#reporductible-code",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Reporductible code",
+    "text": "Reporductible code"
+  },
+  {
+    "objectID": "slides.html#building-reproductibility-with-git-and-github",
+    "href": "slides.html#building-reproductibility-with-git-and-github",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Building reproductibility with Git and GitHub",
+    "text": "Building reproductibility with Git and GitHub"
+  },
+  {
+    "objectID": "slides.html#analyze.-share.-reproduce",
+    "href": "slides.html#analyze.-share.-reproduce",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Analyze. Share. Reproduce",
+    "text": "Analyze. Share. Reproduce\n\nAn open-source scientific and technical publishing system\nCreate dynamic content with Python, R, Julia, and Observable.\nPublish reproducible, production quality articles, presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.\nShare knowledge and insights organization-wide by publishing to Posit Connect, Confluence, or other publishing systems.\nWrite using Pandoc markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more."
+  },
+  {
+    "objectID": "slides.html#quarto-for-r",
+    "href": "slides.html#quarto-for-r",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Quarto for R",
+    "text": "Quarto for R\n\nA multi-language, next generation version of R Markdown from Posit, with many new features and capabilities.\nLike R Markdown, Quarto uses knitr to execute R code, and is therefore able to render most existing Rmd files without modification."
+  },
+  {
+    "objectID": "slides.html#dynamic-documents",
+    "href": "slides.html#dynamic-documents",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Dynamic Documents",
+    "text": "Dynamic Documents\nGenerate dynamic output using Python, R, Julia, and Observable. Create reproducible documents that can be regenerated when underlying assumptions or data change."
+  },
+  {
+    "objectID": "slides.html#beautiful-publications",
+    "href": "slides.html#beautiful-publications",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Beautiful Publications",
+    "text": "Beautiful Publications\nPublish high-quality articles, reports, presentations, websites, and books in HTML, PDF, MS Word, ePub, and more. Use a single source document to target multiple formats."
+  },
+  {
+    "objectID": "slides.html#scientific-markdown",
+    "href": "slides.html#scientific-markdown",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Scientific Markdown",
+    "text": "Scientific Markdown\nPandoc markdown has excellent support for LaTeX equations and citations. Quarto adds extensions for cross-references, figure panels, callouts, advanced page layout, and more."
+  },
+  {
+    "objectID": "slides.html#websites-and-books",
+    "href": "slides.html#websites-and-books",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Websites and Books",
+    "text": "Websites and Books\nPublish collections of documents as a blog or full website. Create books and manuscripts in both print formats (PDF and MS Word) and online formats (HTML and ePub)."
+  },
+  {
+    "objectID": "slides.html#interactivity",
+    "href": "slides.html#interactivity",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Interactivity",
+    "text": "Interactivity\nEngage readers by adding interactive data exploration to your documents using Jupyter Widgets, htmlwidgets for R, Observable JS, and Shiny."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]

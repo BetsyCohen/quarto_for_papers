@@ -1,0 +1,311 @@
+---
+title: "Clase 2: Introducción a Phyton"
+subtitle: "Introducción al análisis predictivo"
+date: "2025-07-10"
+logo: "img/logo-uces-verde-50x30.jpg"
+author: "Lic. Betsy Cohen"
+format: 
+  revealjs:
+    theme: simple
+    slide-number: true
+    chalkboard: 
+      buttons: true
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+## Qué vamos a ver hoy?
+
+-   Trabajar con proyectos
+-   Repaso modelos ML clase 1
+-   Intro a Scikit-Learn
+-   Aplicando modelos en Python
+
+## Ciclo de vida de un proyecto de Ciencia de datos
+
+::: incremental
+-   Momento 1: Definir el objetivo
+
+-   Momento 2: Recolección de la data
+
+-   Momento 3: Preparar la data
+
+-   Momento 4: Elección del Algoritmo
+
+-   Momento 5: Entrenar el modelo
+
+-   Momento 6: Validación del modelo
+
+-   Momento 7: Deployment del modelo
+:::
+
+## Arrancando con Python
+
+::: columns
+::: {.column width="50%"}
+[![](img/clase_2_python_icon.png){fig-align="center" width="195"}](https://www.python.org/)
+:::
+
+::: {.column width="50%"}
+![](img/clase_2_colab_favicon.png){fig-align="center" width="235"}
+:::
+:::
+
+::: notes
+::: columns
+::: {.column width="50%"}
+**Python**
+
+-   Código abierto
+
+-   Lenguaje de alto nivel
+
+-   Amplia biblioteca de herramientas
+
+-   Integración con otras tecnologías
+:::
+:::
+:::
+
+## Librerías de Python
+
+![](img/clase_2_python_librerias.png)
+
+::: notes
+Scikit-learn: Una biblioteca robusta para machine learning que incluye algoritmos de clasificación, regresión, clustering y más.
+
+NumPy: Proporciona soporte para arrays y matrices de gran tamaño, junto con funciones matemáticas para operar con ellos.
+
+Matplotlib: Una librería para la creación de visualizaciones estáticas, animadas e interactivas en Python.
+
+Seaborn: Construida sobre Matplotlib, ofrece una interfaz de alto nivel para dibujar gráficos estadísticos atractivos e informativos
+
+Pandas: Fundamental para la manipulación y análisis de datos, ofreciendo estructuras como DataFrames.
+
+TensorFlow: Una plataforma de código abierto para machine learning, usada en investigación y producción.Es una biblioteca de bajo nivel.
+
+Keras: Es Una API de alto nivel para construir y entrenar modelos de aprendizaje profundo que se ejecuta sobre frameworks como TensorFlow.
+Keras se puede utilizar para construir modelos de clasificación de imágenes, como reconocer objetos en fotografías, para tareas de procesamiento de lenguaje natural, como el análisis de sentimientos o la traducción automática, analisis de series temporales y para entrenar modelos que generan texto, como chatbots o sistemas de escritura creativa
+:::
+
+## Repasando modelo ML
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTniBEPzh0mY0gncN38VZsuPcOIcI_J1EOK8g&s){width="379"}
+
+::: notes
+En la clase anterior vimos que hay dos grandes paradigmas del aprendizaje automático.
+
+El aprendizaje supervisado que busca que el algoritmo etiquete ejemplos, eligiendo entre dos o más clases (problemas de clasificación) , o que prediga un resultado a partir de un rango de valores (problemas de regresión).
+Los problemas de clasificación Consiste en que el algoritmo trata de etiquetar a los ejemplos, eligiendo entre 2 o más clases.
+Utiliza la información aprendida de los datos de entrenamiento para elegir la etiqueta correcta.
+Los problemas de Entrenamiento de un algoritmo para predecir un resultado a partir de un rango de valores posibles.
+Predice un valor real basándose en entradas pasadas
+
+Y por otro lado, el aprendizaje no supervisado se enfoca en encontrar patrones ocultos en datos sin etiquetar, siendo el agrupamiento (clustering) y la reducción de dimensionalidad sus objetivos principales.
+
+El Agrupamiento tiene como objetivo clasificar en grupos atendiendo a las variables de los datos
+:::
+
+## Repasando modelos ML {.smaller}
+
+|                 | Supervisado                               | No supervisado                          |
+|-----------------|-------------------------------------------|-----------------------------------------|
+| Entrenamiento   | Utiliza datos etiquetados                 | Utiliza datos no etiquetados            |
+| Datos           | Se proporcionan de entrada y salida       | Se proporcionan sólo de entrada         |
+| Objetivo        | Predecir con nuevos datos                 | Encontrar patrones ocultos de los datos |
+| Clasifiuucación | Problemas de clasificación y regresión    | Problemas de clustering y asociaciones  |
+| Usabilidad      | Cuando conocemos la entrada y las salidas | Cuando solo tenemos datos de entrada    |
+
+## Modelos de aprendizaje supervisado {.smaller}
+
+::: incremental
+-   **Linear Regression:** modelos para predecir valores numéricos basados en una relación lineal entre variables.
+
+-   **Logistic Regression:** utilizado para problemas de clasificación, estima la probabilidad de una clase.
+
+-   **K Nearest Neighbors:** clasificación o regresión basada en la proximidad de puntos de datos en un espacio.
+
+-   **Support Vector Machine:** clasificación mediante la búsqueda de un hiperplano que maximiza el margen entre clases.
+
+-   **Naive Bayes:** clasificación basada en el teorema de Bayes, asumiendo independencia entre características.
+
+-   **Decision Tree:** estructuras de árbol para tomar decisiones basadas en reglas jerárquicas.
+
+-   **Random Forests:** conjunto de árboles de decisión para mejorar la precisión y reducir el sobreajuste.
+:::
+
+::: notes
+el teorema de Bayes permite calcular la probabilidad de un evento dado el conocimiento previo sobre las condiciones de ese evento.
+El teorema de Bayes nos ayuda a ajustar nuestras creencias sobre un evento a medida que obtenemos nueva información.
+Comenzamos con una probabilidad previa (P(A)) y luego, al observar nueva evidencia (P(B)), actualizamos esa probabilidad para obtener la probabilidad posterior (P(A\|B)).
+:::
+
+## Scikit-Learn {.smaller}
+
+::: columns
+::: {.column width="60%"}
+-   Código abierto
+
+-   Tareas de machine learning, como clasificación, regresión, clustering y más
+
+-   Facilita la Implementación de Algoritmos
+
+-   Documentación Completa
+:::
+
+::: {.column width="40%"}
+![](img/clase_2_scikit-Learn.png)
+:::
+:::
+
+::: notes
+Librería de Machine Learning: Scikit-learn es una librería de código abierto en Python que se utiliza para realizar tareas de machine learning, como clasificación, regresión, clustering y más
+
+Facilita la Implementación de Algoritmos: Proporciona una amplia variedad de algoritmos y herramientas preconstruidos para que los científicos de datos y desarrolladores implementen modelos de machine learning de manera eficiente
+
+Documentación Completa: Scikit-learn ofrece una documentación completa, lo que la hace fácil de usar y una elección popular para aquellos que trabajan en el campo del aprendizaje automático en Python.
+:::
+
+## Regresión lineal {.smaller}
+
+::: columns
+::: {.column width="40%"}
+-   Busca una ecuación lineal que describe mejor la correlación de la variable independiente con la variable dependiente
+
+-   Minimiza la diferencia entre los valores reales, por ejemplo, los precios de las casas, y los valores que predice la línea.
+    En otras palabras, intenta encontrar una línea que represente la tendencia general en los datos
+:::
+
+::: {.column width="60%"}
+![](img/clase_2_linear_regression.gif)
+:::
+:::
+
+## Árbol de Decisión {.smaller}
+
+::: columns
+-   Aprenden de los datos generando reglas de tipo if-else. 
+
+<!-- -->
+
+-   Separan los datos en grupos cada vez más pequeños de subsets de un dataset original. 
+
+-   A cada división se la conoce con el nombre de nodo.
+    Cuando un nodo no conduce a nuevas divisiones se le denomina hoja
+:::
+
+::: {.column width="60%"}
+![](img/clase_2_arbol.png)
+:::
+
+:::
+
+## Modelos de aprendizaje no supervisado
+
+**K-Means:** Divide datos en grupos (clústeres) basados en similitudes entre muestras.
+
+**PCA** (Principal Component Analysis): Reduce la dimensionalidad de los datos identificando componentes principales que explican la variabilidad.
+
+**DBSCAN:** Encuentra clústeres basados en la densidad de puntos en el espacio de características.
+
+**Clustering jerárquico:** Agrupa gradualmente datos en clústeres jerárquicos o divide clústeres en subgrupos.
+
+## Herramientas de Sklearn
+
+![](img/clase_2_sklearn_getting_started.png)
+
+## Sklearn para clasificación
+
+::: incremental
+-   **¿Qué hace?** Identificar las categorías a las cuales pertenece un objeto y variable
+
+-   **Ideal para:** detectar spam reconocimiento de imágenes, etc.
+
+-   **Algunos Modelos**: máquina de vectores de soportes (SVM), k-vecinos más cercanos (KNN), bosque aleatorio (ransom forest), etc.
+:::
+
+## Sklearn para clasificación
+
+![](img/clase_2_sklearn_clasification.png)
+
+## Sklearn para Regresión
+
+::: incremental
+-   **¿Qué hace?** Predecir un atributo de valor continuo, asociado con un objeto.
+
+-   **Ideal para:** ventas, precios de propiedades.(siempre variables numéricas)
+
+-   **Algunos Modelos**: regresión lineal, Regresión de bosques aleatorios, etc.
+:::
+
+## Sklearn para Regresión
+
+![](img/clase_2_sklearn_regretion.png)
+
+::: notes
+En la regresión logística por ej estimamos la probabilidad de que ocurra un evento.
+La predicción es un valor entre 0 y 1, donde 0 indica una baja probabilidad de que ocurra el evento y 1 indica una probabilidad máxima de que suceda.
+Las ecuaciones logísticas emplean funciones logarítmicas para calcular la línea de regresión.
+
+La regresión logística es un método estadístico utilizado para analizar la relación entre una variable dependiente categórica (que puede tomar solo unos pocos valores) y una o más variables independientes (que pueden ser categóricas o numéricas).
+
+Variable dependiente categórica: La variable que se intenta predecir en la regresión logística es categórica, lo que significa que solo puede tomar un número finito de valores, como "sí" o "no", "aprobado" o "suspendido", etc.
+Variables independientes: La regresión logística puede utilizar tanto variables categóricas como numéricas como predictores.
+Función sigmoide: Esta función, también llamada función logística, es crucial en la regresión logística.
+Convierte la salida del modelo (que puede ser cualquier valor real) en una probabilidad entre 0 y 1.
+Umbral: Se utiliza un valor umbral (generalmente 0.5) para clasificar las predicciones.
+Si la probabilidad predicha es mayor que el umbral, se considera que el evento ha ocurrido, y si es menor, se considera que no ha ocurrido.
+Tipos de regresión logística: Binaria: Para problemas con dos posibles resultados (ej. sí/no).
+Multinomial: Para problemas con más de dos resultados posibles (ej. diferentes tipos de frutas).
+Ordinal: Para problemas donde existe un orden natural entre los resultados (ej. bajo/medio/alto).
+:::
+
+## Matriz de confusión
+
+![](img/clase_2_matriz_confusion.png)
+
+::: notes
+Una matriz de confusión es una herramienta visual utilizada para evaluar el rendimiento de un modelo de clasificación en aprendizaje automático.
+Esencialmente, es una tabla que compara las etiquetas predichas por el modelo con las etiquetas reales de los datos de prueba, permitiendo analizar los errores y aciertos del modelo.
+
+La matriz de confusión organiza los resultados en una tabla cuadrada donde: Filas: Representan las clases reales (etiquetas verdaderas).
+Columnas: Representan las clases predichas por el modelo.
+Entradas: Cada celda de la tabla muestra el número de instancias que pertenecen a una clase real y que fueron clasificadas como una clase predicha.
+:::
+
+## Matriz de confusión
+
+![](img/clase_2_matriz_confusion_2.png)
+
+## Recap: Aprendizaje no supervisado
+
+::: incremental
+-   Nos ayuda a resolver problemas que no son conocidos.
+
+-   El usuario necesita dedicar tiempo a interpretar y etiquetar las clases que siguen esa clasificación.
+
+-   Recordemos que no hay una variable objetivo.
+
+-   Se busca la interdependencia de las variables.
+:::
+
+## Recap: Aprendizaje no supervisado
+
+::: columns
+::: {.column width="50%"}
+**Problemas de clustering**
+
+**\
+**Asignación de individuos/objetos a grupos homogéneos asegurando mínima varianza intra-cluster y máxima varianza inter-cluster intentando descubrir la estructura oculta de los objetos
+:::
+
+::: {.column width="50%"}
+**Problemas de reducción de dimensionalidad\
+**Cuyo propósito es reducir el número de features (variables) por medio de feature selection (selección de características) o feature extraction (combinación de datos originales)
+:::
+:::
+
+## Muchas Gracias
+
+![](img/clase_1_thank_you_2.gif)

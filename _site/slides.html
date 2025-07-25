@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-2c1b5f745a11cfad616ebade4a4a7d24.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-0527aec1ede90da84feccfd0e2e0e36d.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -128,7 +128,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" data-background-image="img/portada.jpg" data-background-opacity="0.25" data-background-size="cover" class="quarto-title-block center">
   <h1 class="title">From Code to Paper: Reproducible Research with Quarto</h1>
 
 <div class="quarto-title-authors">
@@ -136,13 +136,28 @@
 <div class="quarto-title-author-name">
 Betsabe Cohen (BA Sociology) 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            Núcleo de Innovación Social - Buenos Aires Argentina
+          </p>
+    </div>
 </div>
 
 </section>
-<section id="hello-hola" class="slide level2">
-<h2>Hello/ Hola!</h2>
-<p>My name is Betsabé Cohen I’m a sociologist and data analyst from Buenos Aires Argentina I’m ….</p>
+<section id="hello-hola-namaste" class="slide level2 smaller">
+<h2>Hello/ Hola!/ Namaste</h2>
+<div class="columns">
+<div class="column">
+<p><img data-src="https://rladiesba.netlify.app/author/betsabe-cohen/avatar_hue039aedc9d3c7fc9c6ebaa365f220822_828839_270x270_fill_lanczos_center_2.png" width="472"></p>
+</div><div class="column">
+<p>My name is Betsabé Cohen I’m a sociologist and data analyst from Buenos Aires Argentina.</p>
+<p>👩🏻‍🎓 I am currently a Masters student in Statistics at University of Tres de Febrero.</p>
+<p><br>
+I’m currently organizer at:<br>
+<br>
+<strong>RLadies Buenos Aires</strong>: A global organisation that promotes gender diversity in the R community</p>
+<p><strong><br>
+Núcleo de Innovación Social</strong>: An interdisciplinary research and development team in social sciences and technology.</p>
+</div></div>
 </section>
 <section id="agenda" class="slide level2">
 <h2>Agenda</h2>
@@ -156,6 +171,18 @@ Betsabe Cohen (BA Sociology)
 <li class="fragment"><p>Learning More &amp; Getting Involved</p></li>
 </ul>
 </section>
+<section id="over-shoulders-of-giagants" class="slide level2">
+<h2>Over shoulders of giagants</h2>
+<p>This presentation is based on:</p>
+<ul>
+<li class="fragment"><p>“Slides and materials for the”Reproducible Manuscripts with Quarto” talk at posit::conf(2023). by <a href="https://mine.quarto.pub/manuscripts-conf23/#/title-slide">Mine Çetinkaya-Rundel</a></p></li>
+<li class="fragment"><p>Quarto for Academics <a href="https://www.youtube.com/watch?v=EbAAmrB0luA&amp;list=PL8se4oifL2ThKAU95XXjThAcuCqJr--8I&amp;index=10">video</a> on YouTube by Mine Çetinkaya-Rundel and Posit</p></li>
+<li class="fragment"><p>The Turing Way Community, &amp; Scriberia.</p>
+<ol start="2024" type="1">
+<li class="fragment">on https://book.the-turing-way.org/</li>
+</ol></li>
+</ul>
+</section>
 <section>
 <section id="why-reproducibility" class="title-slide slide level1 center">
 <h1>Why Reproducibility?</h1>
@@ -163,12 +190,123 @@ Betsabe Cohen (BA Sociology)
 </section>
 <section id="what-do-we-mean-by-reproductibility" class="slide level2">
 <h2>What do we mean by reproductibility</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://zenodo.org/records/13882307"><img data-src="img/reproductible_code_turing_way.png" alt="The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: The Turing Way Community &amp; Scriberia (2024)."></a></p>
+<figcaption>The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: The Turing Way Community &amp; Scriberia (2024).</figcaption>
+</figure>
+</div>
+<aside class="notes">
+<p>There are several definitions of reproducibility in use but in the context of this meeting we will refer to reproductibilty in as <em>Computational reproducibility: When detailed information is provided about code, software, hardware and implementation details.</em> In other words Reproducibility means that someone else —or even you in six months— can take your data and your code, run it again, and get the same results. In research, this ensures transparency, trust, and the ability to build upon previous work. It’s like leaving breadcrumbs through the forest of your analysis so no one gets lost.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="reporductible-code" class="slide level2">
-<h2>Reporductible code</h2>
+<section id="reproducible-is-distinct-from-replicable-robust-and-generalisable" class="slide level2">
+<h2>Reproducible is distinct from replicable, robust and generalisable</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://book.the-turing-way.org/reproducible-research/overview/overview-definitions"><img data-src="img/reproducible-matrix.jpg" class="quarto-figure quarto-figure-center" alt="How the Turing Way defines reproducible research"></a></p>
+</figure>
+</div>
+<figcaption>How the Turing Way defines reproducible research</figcaption>
+</figure>
+</div>
+<aside class="notes">
+<p>The different dimensions of reproducible research described in the matrix above have the following definitions:</p>
+<ul>
+<li><p><strong>Reproducible:</strong> A result is reproducible when the <em>same</em> analysis steps performed on the <em>same</em> dataset consistently produces the <em>same</em> answer.</p></li>
+<li><p><strong>Replicable:</strong> A result is replicable when the <em>same</em> analysis performed on <em>different</em> datasets produces qualitatively similar answers.</p></li>
+<li><p><strong>Robust:</strong> A result is robust when the <em>same</em> dataset is subjected to <em>different</em> analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.</p></li>
+<li><p><strong>Generalisable:</strong> Combining replicable and robust findings allow us to form generalisable results. Note that running an analysis on a different software implementation and with a different dataset does not provide <em>generalised</em> results. There will be many more steps to know how well the work applies to all the different aspects of the research question. Generalisation is an important step towards understanding that the result is not dependent on a particular dataset nor a particular version of the analysis pipeline.</p></li>
+</ul>
+<p>Reproducible code is code that runs consistently and automatically produces the same outputs — tables, plots, models — from the same data. Instead of copying-and-pasting results into Word or PowerPoint, you write scripts that generate the full report. This minimizes errors, saves time, and lets your research live and breathe alongside your data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="building-reproductibility-with-git-and-github" class="slide level2">
-<h2>Building reproductibility with Git and GitHub</h2>
+<section id="open-research" class="slide level2">
+<h2><strong>Open Research</strong></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><p>Open Data</p></li>
+<li class="fragment"><p>Open Source Software (as R!)</p></li>
+<li class="fragment"><p>Open Hardware</p></li>
+<li class="fragment"><p>Open Access</p></li>
+<li class="fragment"><p>Open notebooks (show the world how you do it with Rscripts and Quarto Manuscripts!)</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://zenodo.org/records/13882307"><img data-src="img/evolution-open-research.png" alt="The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: The Turing Way Community &amp; Scriberia (2024)."></a></p>
+<figcaption>The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: The Turing Way Community &amp; Scriberia (2024).</figcaption>
+</figure>
+</div>
+</div></div>
+<aside class="notes">
+<p>Open research aims to transform research by making it more reproducible, transparent, reusable, collaborative, accountable, and accessible to society.</p>
+<p>The Turing Way (open collaboration, and community-driven project that has produce a handbook to reproducible, ethical and collaborative data science.) suggest a checklist for Open</p>
+<p><strong>Open Data</strong></p>
+<ul>
+<li><p>Ensure your data is in a simple, standard format or formats which is machine and human-readable.</p></li>
+<li><p>Check, reformat or create metadata to clearly describe what the data is, how it was collected, and any associated strengths/weaknesses to someone that finds it.</p></li>
+<li><p>Identify a relevant, easily discoverable repository or repositories to host your data, and upload it there.</p></li>
+<li><p>Assign your data a persistent identifier such as a DOI.</p></li>
+</ul>
+<p><strong>Open Source Software</strong></p>
+<ul>
+<li><p>Put your code in a freely accessible repository.</p></li>
+<li><p>Include a licence granting others the right to use, copy and modify your work. You can use the <a href="https://book.the-turing-way.org/reproducible-research/licensing"><strong>Licensing</strong></a> chapter to help you pick the most appropriate licence for your project.</p></li>
+<li><p>Include a README file containing useful information about a project such as what it is, how to use/install it and how to run any tests.</p></li>
+<li><p>If you want others to collaborate on the project include contribution guidelines.</p></li>
+</ul>
+<p><strong>Open Hardware</strong></p>
+<ul>
+<li><p>Use open hardware where practical.</p></li>
+<li><p>Make detailed documentation and designs for any hardware you develop openly available.</p></li>
+<li><p>Include a licence granting others the right to use, copy and modify your work. You can use <a href="https://choosealicense.com/"><strong>this</strong></a> website to help you pick the most appropriate licence for your project.</p></li>
+<li><p>Include a README file containing useful information about a project (for example, what it is and the materials used).</p></li>
+</ul>
+<p><strong>Open Access</strong></p>
+<ul>
+<li><p>Publish your research in an open-access journal.</p></li>
+<li><p>Store a copy or preprint of your work in a freely accessible public repository.</p></li>
+</ul>
+<p><strong>Open Notebooks</strong></p>
+<ul>
+<li><p>Keep notes in an <strong>Electronic Lab Notebook</strong>.</p></li>
+<li><p>Make your notebooks <strong>publicly accessible online</strong>.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
 <section id="what-is-quarto" class="title-slide slide level1 center">
@@ -178,60 +316,274 @@ Betsabe Cohen (BA Sociology)
 <section id="analyze.-share.-reproduce" class="slide level2">
 <h2>Analyze. Share. Reproduce</h2>
 <ul>
-<li><p>An open-source scientific and technical publishing system</p></li>
-<li><p>Create dynamic content with Python, R, Julia, and Observable.</p></li>
-<li><p>Publish reproducible, production quality articles, presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.</p></li>
-<li><p>Share knowledge and insights organization-wide by publishing to Posit Connect, Confluence, or other publishing systems.</p></li>
-<li><p>Write using Pandoc markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.</p></li>
+<li class="fragment"><p>An open-source scientific and technical publishing system</p></li>
+<li class="fragment"><p>Create dynamic content with Python, R, Julia, and Observable.</p></li>
+<li class="fragment"><p>Publish reproducible, production quality articles, presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more.</p></li>
+<li class="fragment"><p>Share knowledge and insights organization-wide by publishing to Posit Connect, Confluence, or other publishing systems.</p></li>
+<li class="fragment"><p>Write using Pandoc markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.</p></li>
 </ul>
 </section>
-<section id="quarto-for-r" class="slide level2">
-<h2>Quarto for R</h2>
-<ul>
-<li><p>A multi-language, next generation version of R Markdown from Posit, with many new features and capabilities.</p></li>
-<li><p>Like R Markdown, Quarto uses knitr to execute R code, and is therefore able to render most existing Rmd files without modification.</p></li>
-</ul>
+<section id="quarto-workflow" class="slide level2">
+<h2>Quarto Workflow</h2>
 </section></section>
 <section>
-<section id="core-use-cases" class="title-slide slide level1 center">
-<h1>Core Use Cases</h1>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
 
+<img data-src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/b5217f2a-f129-4bf9-90dc-c5b9783d0ea8.png?h=f8d3ed40353f4ae6eb77dae39072510c" alt="&quot;Artwork from &quot;Hello, Quarto&quot; keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.&quot;" class="r-stretch quarto-figure-center"><p class="caption">“Artwork from”Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.”</p><aside class="notes">
+<p>If you have worked with RMarkdown before you can think of Quarto as the new and emproved generation of it.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="dynamic-documents" class="slide level2">
-<h2>Dynamic Documents</h2>
-<p>Generate dynamic output using Python, R, Julia, and Observable. Create reproducible documents that can be regenerated when underlying assumptions or data change.</p>
+<section id="quarto-for-r-and-other-languages" class="slide level2">
+<h2>Quarto for R and other languages</h2>
+<div class="columns">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c2ef45f1-4a68-4c7a-a43f-bdcf0f90e104.png?h=57404b88e9bf43eea2d2b57c71b13303" alt="&quot;Artwork from &quot;Hello, Quarto&quot; keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.&quot;"></p>
+<figcaption>“Artwork from”Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.”</figcaption>
+</figure>
+</div><aside class="notes">
+<p>A multi-language, next generation version of R Markdown from Posit, with many new features and capabilities.</p>
+<p>Like R Markdown, Quarto uses knitr to execute R code, and is therefore able to render most existing Rmd files without modification.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
 </section>
-<section id="beautiful-publications" class="slide level2">
-<h2>Beautiful Publications</h2>
-<p>Publish high-quality articles, reports, presentations, websites, and books in HTML, PDF, MS Word, ePub, and more. Use a single source document to target multiple formats.</p>
-</section>
-<section id="scientific-markdown" class="slide level2">
-<h2>Scientific Markdown</h2>
-<p>Pandoc markdown has excellent support for LaTeX equations and citations. Quarto adds extensions for cross-references, figure panels, callouts, advanced page layout, and more.</p>
-</section>
-<section id="websites-and-books" class="slide level2">
-<h2>Websites and Books</h2>
-<p>Publish collections of documents as a blog or full website. Create books and manuscripts in both print formats (PDF and MS Word) and online formats (HTML and ePub).</p>
-</section>
-<section id="interactivity" class="slide level2">
-<h2>Interactivity</h2>
-<p>Engage readers by adding interactive data exploration to your documents using Jupyter Widgets, htmlwidgets for R, Observable JS, and Shiny.</p>
+<section id="use-cases" class="slide level2">
+<h2>Use Cases</h2>
+<ul>
+<li class="fragment"><p>🗃️<strong>Dynamic Documents</strong></p></li>
+<li class="fragment"><p>🌄<strong>Beautiful Publications</strong></p></li>
+<li class="fragment"><p>🧪<strong>Scientific Markdown</strong></p></li>
+<li class="fragment"><p>🕸️<strong>Websites and Books</strong></p></li>
+<li class="fragment"><p>📽️<strong>Interactivity</strong></p></li>
+</ul>
+<aside class="notes">
+<ul>
+<li><p>🗃️<strong>Dynamic Documents</strong>: Generate dynamic output using Python, R, Julia, and Observable. Create reproducible documents that can be regenerated when underlying assumptions or data change.</p></li>
+<li><p>🌄<strong>Beautiful Publications</strong>: Publish high-quality articles, reports, presentations, websites, and books in HTML, PDF, MS Word, ePub, and more. Use a single source document to target multiple formats.</p></li>
+<li><p>🧪<strong>Scientific Markdown:</strong> Pandoc markdown has excellent support for LaTeX equations and citations. Quarto adds extensions for cross-references, figure panels, callouts, advanced page layout, and more.</p></li>
+<li><p>🕸️<strong>Websites and Books:</strong> Publish collections of documents as a blog or full website. Create books and manuscripts in both print formats (PDF and MS Word) and online formats (HTML and ePub).</p></li>
+<li><p>📽️<strong>Interactivity:</strong> Engage readers by adding interactive data exploration to your documents using Jupyter Widgets, htmlwidgets for R, Observable JS, and Shiny.</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
-<section id="academic-production-with-quarto-manuscripts" class="title-slide slide level1 center">
-<h1>Academic Production with Quarto Manuscripts</h1>
+<section>
+<section id="a-short-walk-around" class="title-slide slide level1 center">
+<h1>A short walk around</h1>
 
 </section>
+<section id="install-quarto" class="slide level2">
+<h2>Install Quarto</h2>
 
-<section id="tips-on-practical-reproducibility-github-integration" class="title-slide slide level1 center">
-<h1>Tips on Practical Reproducibility: GitHub Integration</h1>
+<img data-src="img/install_quarto.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="create-a-quarto-file-in-a-project-we-already-have" class="slide level2">
+<h2>Create a Quarto File in a project we already have</h2>
+
+<img data-src="img/create_qmd_file.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="create-a-new-quarto-project" class="slide level2">
+<h2>Create a New Quarto Project</h2>
+
+<img data-src="img/new_project_wizard_quarto.png" class="quarto-figure quarto-figure-left r-stretch"></section>
+<section id="folder-structure-in-a-quarto-project" class="slide level2">
+<h2>Folder structure in a Quarto Project</h2>
+
+<img data-src="img/quarto_project_schema.png" class="r-stretch"><aside class="notes">
+<p>When we create a Quarto project we’ll automatically create RPorj file (as in any other Quarto project) and a .yml file (for the entire project), my Quarto document (the one that has the .qmd extension.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quarto-file-general-structure" class="slide level2">
+<h2>Quarto file general structure</h2>
+
+<img data-src="img/quart-html-file-1.png" class="r-stretch"><aside class="notes">
+<p>For those of you have worked with RMarkdown before this should be familiar, at the top we have a YAML with some metadata about our file, like the title, format (we’ll start by an html)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="visual-mode-vs-source-mode" class="slide level2">
+<h2>Visual mode vs Source mode</h2>
+
+<img data-src="https://quarto.org/docs/visual-editor/images/visual-editing-switch-modes.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>The Quarto visual editor is currently available as a feature of the&nbsp;<a href="https://posit.co/download/rstudio-desktop/">RStudio IDE</a>. The visual editor will eventually also be made available in standalone form. You can switch over the source editor, and things should look pretty familiar to you.</p>
+<p>The visual editor where you get a documeny that feels similar to a Google Doc in an app-like notion wehere yjos are a liitle bit more you see-what-you-get.</p>
+<p>For example I hace some infromation about the data set and I may want to bold the name if the package.</p>
+<p>I can add a link to a website.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="visual-mode-shortcuts" class="slide level2">
+<h2>Visual mode shortcuts</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="https://quarto.org/docs/visual-editor/images/visual-editing-omni-list.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://quarto.org/docs/visual-editor/images/visual-editing-omni-math.png"></p>
+</div></div>
+</section>
+<section id="insert-code-chuncks" class="slide level2">
+<h2>Insert Code Chuncks</h2>
+<aside class="notes">
+<p>In the same way that we did in RMarkdown we can add chunck codes</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><img data-src="img/insert code chunck.gif"> ## Code cuncks options</p>
+<aside class="notes">
+<p>As is RMarkdown Quarto allows us to control different aspects of how chuncks behaver</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<p><img data-src="img/quarto-code-chunck-options.png"></p>
+</section>
+<section id="code-cuncks-options-from-yaml" class="slide level2">
+<h2>Code cuncks options from YAML</h2>
+
+<img data-src="img/quarto-code-chunck-options-yml.png" class="r-stretch"></section></section>
+<section>
+<section id="quarto-for-journal-articles" class="title-slide slide level1 center">
+<h1>Quarto for journal articles</h1>
 
 </section>
-
-<section id="hands-on-coding" class="title-slide slide level1 center">
-<h1>Hands-on Coding</h1>
-
-
+<section id="quarto-can" class="slide level2">
+<h2>Quarto can</h2>
+<ul>
+<li class="fragment"><p>be authored in your favorite code editor</p></li>
+<li class="fragment"><p>apply journal styles to your outputs with Quarto extensions</p></li>
+<li class="fragment"><p>orchestrate multiple inputs and outputs with embedded computing using a new Quarto project type: manuscript</p></li>
+<li class="fragment"><p>produce manuscripts in multiple formats (including LaTeX or MS Word formats required by journals), and give readers easy access to all of the formats through a website</p></li>
+<li class="fragment"><p>publish computations from one or more notebooks alongside the manuscript, allowing readers to dive into your code and view it or interact with it in a virtual environment</p></li>
+<li class="fragment"><p>publish to GitHub Pages, Netlify, and more</p></li>
+</ul>
 </section>
+<section id="lets-get-started-with-a-manuscript" class="slide level2">
+<h2>Let’s get started with a manuscript</h2>
+<h3 id="option-1-start-from-scratch">Option 1: Start from scratch</h3>
+<ul>
+<li class="fragment"><p>Create a Quarto manuscript:</p>
+<ul>
+<li class="fragment"><p>RStudio: New Project &gt; New Directory &gt; Quarto Manuscript or</p></li>
+<li class="fragment"><p><code>quarto create project manuscript &lt;name&gt;</code></p></li>
+</ul></li>
+<li class="fragment"><p>Add manuscript content</p></li>
+</ul>
+<h3 id="option-2-start-with-a-sample-from">Option 2: Start with a sample from</h3>
+<p><a href="https://quarto.org/docs/manuscripts" class="uri">https://quarto.org/docs/manuscripts</a></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Learn how to Track your project with Git and host on GitHub for happy publishing.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="how-does-it-look-like" class="slide level2">
+<h2>How does it look like?</h2>
+<iframe src="https://dragonstyle.github.io/submission-quarto-lite-r/" title="La Palma Earthquakes" width="1100px" height="600px"></iframe>
+</section>
+<section id="your-turn" class="slide level2">
+<h2>Your turn!</h2>
+<p>Create a Quarto manuscript</p>
+</section>
+<section id="setting" class="slide level2">
+<h2>Setting</h2>
+<p>What’s next? Actually dive into the code We’ve seen that you can peruse the code underlying the figures and tables in the manuscript</p>
+<p>What if you wanted to interact with the code – in a computational environment that’s just a click away and that has all the software and packages needed to reproduce the manuscript?</p>
+
+<img data-src="img/console-clone-repo.png" class="r-stretch"><aside class="notes">
+<p>As I asume you do noit have experience working with git hub we’re gone practice a semi reproductrivble version of how tob worlk with repoductible manuscripts. If you are familiarizedf eith github you’ll finde the cmplete worknlow in the Quarto documentation iun the Manusucript section.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

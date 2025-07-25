@@ -11,7 +11,7 @@
     "href": "slides.html#hello-hola",
     "title": "From Code to Paper: Reproducible Research with Quarto",
     "section": "Hello/ Hola!",
-    "text": "Hello/ Hola!\nMy name is Betsabé Cohen I’m a sociologist and data analyst from Buenos Aires Argentina I’m …."
+    "text": "Hello/ Hola!\n\n\n\n\nMy name is Betsabé Cohen I’m a sociologist and data analyst from Buenos Aires Argentina.\n👩🏻‍🎓 I am currently a Masters student in Statistics at University of Tres de Febrero.\nI am part of:\nRLadies Buenos Aires: A global organisation that promotes gender diversity in the R community\nNúcleo de Innovación Social: An interdisciplinary research and development team in social sciences and technology."
   },
   {
     "objectID": "slides.html#agenda",
@@ -25,14 +25,14 @@
     "href": "slides.html#what-do-we-mean-by-reproductibility",
     "title": "From Code to Paper: Reproducible Research with Quarto",
     "section": "What do we mean by reproductibility",
-    "text": "What do we mean by reproductibility"
+    "text": "What do we mean by reproductibility\n\n\n\nThe Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: The Turing Way Community & Scriberia (2024).\n\n\n\nThere are several definitions of reproducibility in use but in the context of this meeting we will refer to reproductibilty in as Computational reproducibility: When detailed information is provided about code, software, hardware and implementation details. In other words Reproducibility means that someone else —or even you in six months— can take your data and your code, run it again, and get the same results. In research, this ensures transparency, trust, and the ability to build upon previous work. It’s like leaving breadcrumbs through the forest of your analysis so no one gets lost."
   },
   {
     "objectID": "slides.html#reporductible-code",
     "href": "slides.html#reporductible-code",
     "title": "From Code to Paper: Reproducible Research with Quarto",
     "section": "Reporductible code",
-    "text": "Reporductible code"
+    "text": "Reporductible code\nReproducible code is code that runs consistently and automatically produces the same outputs — tables, plots, models — from the same data. Instead of copying-and-pasting results into Word or PowerPoint, you write scripts that generate the full report. This minimizes errors, saves time, and lets your research live and breathe alongside your data."
   },
   {
     "objectID": "slides.html#building-reproductibility-with-git-and-github",
@@ -53,7 +53,7 @@
     "href": "slides.html#quarto-for-r",
     "title": "From Code to Paper: Reproducible Research with Quarto",
     "section": "Quarto for R",
-    "text": "Quarto for R\n\nA multi-language, next generation version of R Markdown from Posit, with many new features and capabilities.\nLike R Markdown, Quarto uses knitr to execute R code, and is therefore able to render most existing Rmd files without modification."
+    "text": "Quarto for R\n\n\n\n\n“Artwork from”Hello, Quarto\" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.\"\n\n\nA multi-language, next generation version of R Markdown from Posit, with many new features and capabilities.\nLike R Markdown, Quarto uses knitr to execute R code, and is therefore able to render most existing Rmd files without modification."
   },
   {
     "objectID": "slides.html#dynamic-documents",
@@ -96,5 +96,229 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "slides.html#creating-a-quarto-document",
+    "href": "slides.html#creating-a-quarto-document",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Creating a Quarto Document",
+    "text": "Creating a Quarto Document"
+  },
+  {
+    "objectID": "slides.html#visual-mode",
+    "href": "slides.html#visual-mode",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Visual Mode",
+    "text": "Visual Mode"
+  },
+  {
+    "objectID": "slides.html#code-chuncks-and-chunck-options",
+    "href": "slides.html#code-chuncks-and-chunck-options",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Code Chuncks and Chunck Options",
+    "text": "Code Chuncks and Chunck Options\n\nIn the same way that we did in RMarkdown we can add chunck codes"
+  },
+  {
+    "objectID": "slides.html#hello-hola-namaste",
+    "href": "slides.html#hello-hola-namaste",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Hello/ Hola!/ Namaste",
+    "text": "Hello/ Hola!/ Namaste\n\n\n\n\nMy name is Betsabé Cohen I’m a sociologist and data analyst from Buenos Aires Argentina.\n👩🏻‍🎓 I am currently a Masters student in Statistics at University of Tres de Febrero.\n\nI’m currently organizer at:\n\nRLadies Buenos Aires: A global organisation that promotes gender diversity in the R community\n\nNúcleo de Innovación Social: An interdisciplinary research and development team in social sciences and technology."
+  },
+  {
+    "objectID": "slides.html#reproducible-is-distinct-from-replicable-robust-and-generalisable",
+    "href": "slides.html#reproducible-is-distinct-from-replicable-robust-and-generalisable",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Reproducible is distinct from replicable, robust and generalisable",
+    "text": "Reproducible is distinct from replicable, robust and generalisable\n\n\n\n\n\n\n\nHow the Turing Way defines reproducible research\n\n\n\nThe different dimensions of reproducible research described in the matrix above have the following definitions:\n\nReproducible: A result is reproducible when the same analysis steps performed on the same dataset consistently produces the same answer.\nReplicable: A result is replicable when the same analysis performed on different datasets produces qualitatively similar answers.\nRobust: A result is robust when the same dataset is subjected to different analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced. Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.\nGeneralisable: Combining replicable and robust findings allow us to form generalisable results. Note that running an analysis on a different software implementation and with a different dataset does not provide generalised results. There will be many more steps to know how well the work applies to all the different aspects of the research question. Generalisation is an important step towards understanding that the result is not dependent on a particular dataset nor a particular version of the analysis pipeline.\n\nReproducible code is code that runs consistently and automatically produces the same outputs — tables, plots, models — from the same data. Instead of copying-and-pasting results into Word or PowerPoint, you write scripts that generate the full report. This minimizes errors, saves time, and lets your research live and breathe alongside your data."
+  },
+  {
+    "objectID": "slides.html#open-research",
+    "href": "slides.html#open-research",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Open Research",
+    "text": "Open Research\n\n\n\nOpen Data\nOpen Source Software (as R!)\nOpen Hardware\nOpen Access\nOpen notebooks (show the world how you do it with Rscripts and Quarto Manuscripts!)\n\n\n\n\n\nThe Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: The Turing Way Community & Scriberia (2024).\n\n\n\n\nOpen research aims to transform research by making it more reproducible, transparent, reusable, collaborative, accountable, and accessible to society.\nThe Turing Way (open collaboration, and community-driven project that has produce a handbook to reproducible, ethical and collaborative data science.) suggest a checklist for Open\nOpen Data\n\nEnsure your data is in a simple, standard format or formats which is machine and human-readable.\nCheck, reformat or create metadata to clearly describe what the data is, how it was collected, and any associated strengths/weaknesses to someone that finds it.\nIdentify a relevant, easily discoverable repository or repositories to host your data, and upload it there.\nAssign your data a persistent identifier such as a DOI.\n\nOpen Source Software\n\nPut your code in a freely accessible repository.\nInclude a licence granting others the right to use, copy and modify your work. You can use the Licensing chapter to help you pick the most appropriate licence for your project.\nInclude a README file containing useful information about a project such as what it is, how to use/install it and how to run any tests.\nIf you want others to collaborate on the project include contribution guidelines.\n\nOpen Hardware\n\nUse open hardware where practical.\nMake detailed documentation and designs for any hardware you develop openly available.\nInclude a licence granting others the right to use, copy and modify your work. You can use this website to help you pick the most appropriate licence for your project.\nInclude a README file containing useful information about a project (for example, what it is and the materials used).\n\nOpen Access\n\nPublish your research in an open-access journal.\nStore a copy or preprint of your work in a freely accessible public repository.\n\nOpen Notebooks\n\nKeep notes in an Electronic Lab Notebook.\nMake your notebooks publicly accessible online."
+  },
+  {
+    "objectID": "slides.html#open-data",
+    "href": "slides.html#open-data",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Open Data",
+    "text": "Open Data\n\nEnsure your data is in a simple, standard format or formats which is machine and human-readable.\nCheck, reformat or create metadata to clearly describe what the data is, how it was collected, and any associated strengths/weaknesses to someone that finds it.\nIdentify a relevant, easily discoverable repository or repositories to host your data, and upload it there.\nAssign your data a persistent identifier such as a DOI."
+  },
+  {
+    "objectID": "slides.html#open-source-software",
+    "href": "slides.html#open-source-software",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Open Source Software",
+    "text": "Open Source Software\n\nPut your code in a freely accessible repository.\nInclude a licence granting others the right to use, copy and modify your work. You can use the Licensing chapter to help you pick the most appropriate licence for your project.\nInclude a README file containing useful information about a project such as what it is, how to use/install it and how to run any tests.\nIf you want others to collaborate on the project include contribution guidelines."
+  },
+  {
+    "objectID": "slides.html#open-hardware",
+    "href": "slides.html#open-hardware",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Open Hardware",
+    "text": "Open Hardware\n\nUse open hardware where practical.\nMake detailed documentation and designs for any hardware you develop openly available.\nInclude a licence granting others the right to use, copy and modify your work. You can use this website to help you pick the most appropriate licence for your project.\nInclude a README file containing useful information about a project (for example, what it is and the materials used)."
+  },
+  {
+    "objectID": "slides.html#open-access",
+    "href": "slides.html#open-access",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Open Access",
+    "text": "Open Access\n\nPublish your research in an open-access journal.\nStore a copy or preprint of your work in a freely accessible public repository."
+  },
+  {
+    "objectID": "slides.html#open-notebooks",
+    "href": "slides.html#open-notebooks",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Open Notebooks",
+    "text": "Open Notebooks\n\nKeep notes in an Electronic Lab Notebook.\nMake your notebooks publicly accessible online."
+  },
+  {
+    "objectID": "slides.html#quarto-workflow",
+    "href": "slides.html#quarto-workflow",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Quarto Workflow",
+    "text": "Quarto Workflow"
+  },
+  {
+    "objectID": "slides.html#quarto-for-r-and-other-languages",
+    "href": "slides.html#quarto-for-r-and-other-languages",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Quarto for R and other languages",
+    "text": "Quarto for R and other languages\n\n\n\n\n“Artwork from”Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.”\n\n\nA multi-language, next generation version of R Markdown from Posit, with many new features and capabilities.\nLike R Markdown, Quarto uses knitr to execute R code, and is therefore able to render most existing Rmd files without modification."
+  },
+  {
+    "objectID": "slides.html#install-quarto",
+    "href": "slides.html#install-quarto",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Install Quarto",
+    "text": "Install Quarto"
+  },
+  {
+    "objectID": "slides.html#create-a-quarto-file-in-a-project-we-already-have",
+    "href": "slides.html#create-a-quarto-file-in-a-project-we-already-have",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Create a Quarto File in a project we already have",
+    "text": "Create a Quarto File in a project we already have"
+  },
+  {
+    "objectID": "slides.html#create-a-new-quarto-project",
+    "href": "slides.html#create-a-new-quarto-project",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Create a New Quarto Project",
+    "text": "Create a New Quarto Project"
+  },
+  {
+    "objectID": "slides.html#folder-structure-in-a-quarto-project",
+    "href": "slides.html#folder-structure-in-a-quarto-project",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Folder structure in a Quarto Project",
+    "text": "Folder structure in a Quarto Project\n\n\nWhen we create a Quarto project we’ll automatically create RPorj file (as in any other Quarto project) and a .yml file (for the entire project), my Quarto document (the one that has the .qmd extension."
+  },
+  {
+    "objectID": "slides.html#quarto-file-general-structure",
+    "href": "slides.html#quarto-file-general-structure",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Quarto file general structure",
+    "text": "Quarto file general structure\n\n\nFor those of you have worked with RMarkdown before this should be familiar, at the top we have a YAML with some metadata about our file, like the title, format (we’ll start by an html)"
+  },
+  {
+    "objectID": "slides.html#what-is-a-manuscript",
+    "href": "slides.html#what-is-a-manuscript",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "What is a Manuscript",
+    "text": "What is a Manuscript\nhttps://quarto-ext.github.io/manuscript-template-jupyter/"
+  },
+  {
+    "objectID": "slides.html#cloning-the-repo",
+    "href": "slides.html#cloning-the-repo",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Cloning the repo",
+    "text": "Cloning the repo\n\n\nAs I asume you do noit have experience working with git hub we’re gone practice a semi reproductrivble version of how tob worlk with repoductible manuscripts. If you are familiarizedf eith github you’ll finde the cmplete worknlow in the Quarto documentation iun the Manusucript section."
+  },
+  {
+    "objectID": "slides.html#visual-mode-vs-source-mode",
+    "href": "slides.html#visual-mode-vs-source-mode",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Visual mode vs Source mode",
+    "text": "Visual mode vs Source mode\n\n\nThe Quarto visual editor is currently available as a feature of the RStudio IDE. The visual editor will eventually also be made available in standalone form. You can switch over the source editor, and things should look pretty familiar to you.\nThe visual editor where you get a documeny that feels similar to a Google Doc in an app-like notion wehere yjos are a liitle bit more you see-what-you-get.\nFor example I hace some infromation about the data set and I may want to bold the name if the package.\nI can add a link to a website."
+  },
+  {
+    "objectID": "slides.html#visual-mode-shortcuts",
+    "href": "slides.html#visual-mode-shortcuts",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Visual mode shortcuts",
+    "text": "Visual mode shortcuts"
+  },
+  {
+    "objectID": "slides.html#visual-mode-learning-more",
+    "href": "slides.html#visual-mode-learning-more",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Visual mode: learning more",
+    "text": "Visual mode: learning more\nCheck out the following articles to learn more about visual markdown editing:\n\nTechnical Writing covers features commonly used in scientific and technical writing, including citations, cross-references, footnotes, equations, embedded code, and LaTeX.\nContent Editing provides more depth on visual editor support for tables, lists, pandoc attributes, CSS styles, comments, symbols/emojis, etc.\nShortcuts & Options documents the two types of shortcuts you can use with the editor: standard keyboard shortcuts and markdown shortcuts and describes various options for configuring the editor.\nMarkdown Output describes how the visual editor parses and writes markdown and describes various ways you can customize this."
+  },
+  {
+    "objectID": "slides.html#use-cases",
+    "href": "slides.html#use-cases",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Use Cases",
+    "text": "Use Cases\n\n🗃️Dynamic Documents\n🌄Beautiful Publications\n🧪Scientific Markdown\n🕸️Websites and Books\n📽️Interactivity\n\n\n\n🗃️Dynamic Documents: Generate dynamic output using Python, R, Julia, and Observable. Create reproducible documents that can be regenerated when underlying assumptions or data change.\n🌄Beautiful Publications: Publish high-quality articles, reports, presentations, websites, and books in HTML, PDF, MS Word, ePub, and more. Use a single source document to target multiple formats.\n🧪Scientific Markdown: Pandoc markdown has excellent support for LaTeX equations and citations. Quarto adds extensions for cross-references, figure panels, callouts, advanced page layout, and more.\n🕸️Websites and Books: Publish collections of documents as a blog or full website. Create books and manuscripts in both print formats (PDF and MS Word) and online formats (HTML and ePub).\n📽️Interactivity: Engage readers by adding interactive data exploration to your documents using Jupyter Widgets, htmlwidgets for R, Observable JS, and Shiny."
+  },
+  {
+    "objectID": "slides.html#over-shoulders-of-giagants",
+    "href": "slides.html#over-shoulders-of-giagants",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Over shoulders of giagants",
+    "text": "Over shoulders of giagants\nThis presentation is based on:\n\n“Slides and materials for the”Reproducible Manuscripts with Quarto” talk at posit::conf(2023). by Mine Çetinkaya-Rundel\nQuarto for Academics video on YouTube by Mine Çetinkaya-Rundel and Posit\nThe Turing Way Community, & Scriberia.\n\non https://book.the-turing-way.org/"
+  },
+  {
+    "objectID": "slides.html#insert-code-chuncks",
+    "href": "slides.html#insert-code-chuncks",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Insert Code Chuncks",
+    "text": "Insert Code Chuncks\n\nIn the same way that we did in RMarkdown we can add chunck codes\n\n ## Code cuncks options\n\nAs is RMarkdown Quarto allows us to control different aspects of how chuncks behaver"
+  },
+  {
+    "objectID": "slides.html#code-cuncks-options-from-yaml",
+    "href": "slides.html#code-cuncks-options-from-yaml",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Code cuncks options from YAML",
+    "text": "Code cuncks options from YAML"
+  },
+  {
+    "objectID": "slides.html#quarto-can",
+    "href": "slides.html#quarto-can",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Quarto can",
+    "text": "Quarto can\n\nbe authored in your favorite code editor\napply journal styles to your outputs with Quarto extensions\norchestrate multiple inputs and outputs with embedded computing using a new Quarto project type: manuscript\nproduce manuscripts in multiple formats (including LaTeX or MS Word formats required by journals), and give readers easy access to all of the formats through a website\npublish computations from one or more notebooks alongside the manuscript, allowing readers to dive into your code and view it or interact with it in a virtual environment\npublish to GitHub Pages, Netlify, and more"
+  },
+  {
+    "objectID": "slides.html#lets-get-started-with-a-manuscript",
+    "href": "slides.html#lets-get-started-with-a-manuscript",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Let’s get started with a manuscript",
+    "text": "Let’s get started with a manuscript\nOption 1: Start from scratch\n\nCreate a Quarto manuscript:\n\nRStudio: New Project &gt; New Directory &gt; Quarto Manuscript or\nquarto create project manuscript &lt;name&gt;\n\nAdd manuscript content\n\nOption 2: Start with a sample from\nhttps://quarto.org/docs/manuscripts\n\n\n\n\n\n\nTip\n\n\nLearn how to Track your project with Git and host on GitHub for happy publishing."
+  },
+  {
+    "objectID": "slides.html#how-does-it-look-like",
+    "href": "slides.html#how-does-it-look-like",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "How does it look like?",
+    "text": "How does it look like?"
+  },
+  {
+    "objectID": "slides.html#your-turn",
+    "href": "slides.html#your-turn",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Your turn!",
+    "text": "Your turn!\nCreate a Quarto manuscript"
+  },
+  {
+    "objectID": "slides.html#setting",
+    "href": "slides.html#setting",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Setting",
+    "text": "Setting\nWhat’s next? Actually dive into the code We’ve seen that you can peruse the code underlying the figures and tables in the manuscript\nWhat if you wanted to interact with the code – in a computational environment that’s just a click away and that has all the software and packages needed to reproduce the manuscript?\n\n\nAs I asume you do noit have experience working with git hub we’re gone practice a semi reproductrivble version of how tob worlk with repoductible manuscripts. If you are familiarizedf eith github you’ll finde the cmplete worknlow in the Quarto documentation iun the Manusucript section."
   }
 ]

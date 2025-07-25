@@ -1,27 +1,49 @@
 ---
 title: "From Code to Paper: Reproducible Research with Quarto"
+institute: "Núcleo de Innovación Social - Buenos Aires Argentina"
 author: "Betsabe Cohen (BA Sociology)"
+title-slide-attributes:
+  data-background-image: "img/portada.jpg"
+  data-background-size: cover
+  data-background-opacity: "0.25"
 format: 
   revealjs:
-    theme: simple
+    theme: [slides.scss]
+    mainfont: "Montserrat"
+    fontcolor: "#48484a"
+    linkcolor: "#80a9d7"
+    incremental: true   
     slide-number: true
     chalkboard: 
       buttons: true
 editor: 
   markdown: 
     wrap: sentence
-theme: minty
 ---
 
-## Hello/ Hola!
+## Hello/ Hola!/ Namaste {.smaller}
 
-My name is Betsabé Cohen I'm a sociologist and data analyst from Buenos Aires Argentina
-I'm 
-....
+::: columns
+::: column
+![](https://rladiesba.netlify.app/author/betsabe-cohen/avatar_hue039aedc9d3c7fc9c6ebaa365f220822_828839_270x270_fill_lanczos_center_2.png){width="472"}
+:::
+
+::: column
+My name is Betsabé Cohen I'm a sociologist and data analyst from Buenos Aires Argentina.
+
+👩🏻‍🎓 I am currently a Masters student in Statistics at University of Tres de Febrero.
+
+\
+I'm currently organizer at:\
+\
+**RLadies Buenos Aires**: A global organisation that promotes gender diversity in the R community
+
+**\
+Núcleo de Innovación Social**: An interdisciplinary research and development team in social sciences and technology.
+:::
+:::
 
 ## Agenda
-
-::: incremental
 
 -   Why Reproducibility?
 
@@ -36,17 +58,123 @@ I'm
 -   Hands-on Coding
 
 -   Learning More & Getting Involved
-:::
 
+## Over shoulders of giagants
+
+This presentation is based on:
+
+-   "Slides and materials for the"Reproducible Manuscripts with Quarto" talk at posit::conf(2023). by [Mine Çetinkaya-Rundel](https://mine.quarto.pub/manuscripts-conf23/#/title-slide)
+
+-   Quarto for Academics [video](https://www.youtube.com/watch?v=EbAAmrB0luA&list=PL8se4oifL2ThKAU95XXjThAcuCqJr--8I&index=10) on YouTube by Mine Çetinkaya-Rundel and Posit
+
+-   The Turing Way Community, & Scriberia.
+    (2024) on https://book.the-turing-way.org/
 
 # Why Reproducibility?
 
 ## What do we mean by reproductibility
 
-## Reporductible code
+[![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: The Turing Way Community & Scriberia (2024).](img/reproductible_code_turing_way.png){fig-alt="The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: The Turing Way Community & Scriberia (2024)."}](https://zenodo.org/records/13882307)
 
-## Building reproductibility with Git and GitHub
+::: notes
+There are several definitions of reproducibility in use but in the context of this meeting we will refer to reproductibilty in as *Computational reproducibility: When detailed information is provided about code, software, hardware and implementation details.* In other words Reproducibility means that someone else ---or even you in six months--- can take your data and your code, run it again, and get the same results.
+In research, this ensures transparency, trust, and the ability to build upon previous work.
+It's like leaving breadcrumbs through the forest of your analysis so no one gets lost.
+:::
 
+## Reproducible is distinct from replicable, robust and generalisable
+
+[![How the Turing Way defines reproducible research](img/reproducible-matrix.jpg){fig-alt="How the Turing Way defines reproducible research" fig-align="center"}](https://book.the-turing-way.org/reproducible-research/overview/overview-definitions)
+
+::: notes
+The different dimensions of reproducible research described in the matrix above have the following definitions:
+
+-   **Reproducible:** A result is reproducible when the *same* analysis steps performed on the *same* dataset consistently produces the *same* answer.
+
+-   **Replicable:** A result is replicable when the *same* analysis performed on *different* datasets produces qualitatively similar answers.
+
+-   **Robust:** A result is robust when the *same* dataset is subjected to *different* analysis workflows to answer the same research question (for example one pipeline written in R and another written in Python) and a qualitatively similar or identical answer is produced.
+    Robust results show that the work is not dependent on the specificities of the programming language chosen to perform the analysis.
+
+-   **Generalisable:** Combining replicable and robust findings allow us to form generalisable results.
+    Note that running an analysis on a different software implementation and with a different dataset does not provide *generalised* results.
+    There will be many more steps to know how well the work applies to all the different aspects of the research question.
+    Generalisation is an important step towards understanding that the result is not dependent on a particular dataset nor a particular version of the analysis pipeline.
+
+Reproducible code is code that runs consistently and automatically produces the same outputs --- tables, plots, models --- from the same data.
+Instead of copying-and-pasting results into Word or PowerPoint, you write scripts that generate the full report.
+This minimizes errors, saves time, and lets your research live and breathe alongside your data.
+:::
+
+## **Open Research**
+
+::: columns
+::: {.column width="50%"}
+-   Open Data
+
+-   Open Source Software (as R!)
+
+-   Open Hardware
+
+-   Open Access
+
+-   Open notebooks (show the world how you do it with Rscripts and Quarto Manuscripts!)
+:::
+
+::: {.column width="50%"}
+[![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: The Turing Way Community & Scriberia (2024).](img/evolution-open-research.png){fig-alt="The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: The Turing Way Community & Scriberia (2024)."}](https://zenodo.org/records/13882307)
+:::
+:::
+
+::: notes
+Open research aims to transform research by making it more reproducible, transparent, reusable, collaborative, accountable, and accessible to society.
+
+The Turing Way (open collaboration, and community-driven project that has produce a handbook to reproducible, ethical and collaborative data science.) suggest a checklist for Open
+
+**Open Data**
+
+-   Ensure your data is in a simple, standard format or formats which is machine and human-readable.
+
+-   Check, reformat or create metadata to clearly describe what the data is, how it was collected, and any associated strengths/weaknesses to someone that finds it.
+
+-   Identify a relevant, easily discoverable repository or repositories to host your data, and upload it there.
+
+-   Assign your data a persistent identifier such as a DOI.
+
+**Open Source Software**
+
+-   Put your code in a freely accessible repository.
+
+-   Include a licence granting others the right to use, copy and modify your work.
+    You can use the [**Licensing**](https://book.the-turing-way.org/reproducible-research/licensing) chapter to help you pick the most appropriate licence for your project.
+
+-   Include a README file containing useful information about a project such as what it is, how to use/install it and how to run any tests.
+
+-   If you want others to collaborate on the project include contribution guidelines.
+
+**Open Hardware**
+
+-   Use open hardware where practical.
+
+-   Make detailed documentation and designs for any hardware you develop openly available.
+
+-   Include a licence granting others the right to use, copy and modify your work.
+    You can use [**this**](https://choosealicense.com/) website to help you pick the most appropriate licence for your project.
+
+-   Include a README file containing useful information about a project (for example, what it is and the materials used).
+
+**Open Access**
+
+-   Publish your research in an open-access journal.
+
+-   Store a copy or preprint of your work in a freely accessible public repository.
+
+**Open Notebooks**
+
+-   Keep notes in an **Electronic Lab Notebook**.
+
+-   Make your notebooks **publicly accessible online**.
+:::
 
 # What is Quarto?
 
@@ -62,48 +190,189 @@ I'm
 
 -   Write using Pandoc markdown, including equations, citations, crossrefs, figure panels, callouts, advanced layout, and more.
 
+## Quarto Workflow
 
-## Quarto for R
+# 
 
--   A multi-language, next generation version of R Markdown from Posit, with many new features and capabilities. 
+!["Artwork from"Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/b5217f2a-f129-4bf9-90dc-c5b9783d0ea8.png?h=f8d3ed40353f4ae6eb77dae39072510c){fig-alt="\"Artwork from \"Hello, Quarto\" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.\""}
 
--   Like R Markdown, Quarto uses knitr to execute R code, and is therefore able to render most existing Rmd files without modification.
+::: notes
+If you have worked with RMarkdown before you can think of Quarto as the new and emproved generation of it.
+:::
+
+## Quarto for R and other languages
+
+::: columns
+!["Artwork from"Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c2ef45f1-4a68-4c7a-a43f-bdcf0f90e104.png?h=57404b88e9bf43eea2d2b57c71b13303){fig-alt="\"Artwork from \"Hello, Quarto\" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.\""}
+
+::: notes
+A multi-language, next generation version of R Markdown from Posit, with many new features and capabilities.
+
+Like R Markdown, Quarto uses knitr to execute R code, and is therefore able to render most existing Rmd files without modification.
+:::
+:::
+
+## Use Cases
+
+-   🗃️**Dynamic Documents**
+
+-   🌄**Beautiful Publications**
+
+-   🧪**Scientific Markdown**
+
+-   🕸️**Websites and Books**
+
+-   📽️**Interactivity**
+
+::: notes
+-   🗃️**Dynamic Documents**: Generate dynamic output using Python, R, Julia, and Observable.
+    Create reproducible documents that can be regenerated when underlying assumptions or data change.
+
+-   🌄**Beautiful Publications**: Publish high-quality articles, reports, presentations, websites, and books in HTML, PDF, MS Word, ePub, and more.
+    Use a single source document to target multiple formats.
+
+-   🧪**Scientific Markdown:** Pandoc markdown has excellent support for LaTeX equations and citations.
+    Quarto adds extensions for cross-references, figure panels, callouts, advanced page layout, and more.
+
+-   🕸️**Websites and Books:** Publish collections of documents as a blog or full website.
+    Create books and manuscripts in both print formats (PDF and MS Word) and online formats (HTML and ePub).
+
+-   📽️**Interactivity:** Engage readers by adding interactive data exploration to your documents using Jupyter Widgets, htmlwidgets for R, Observable JS, and Shiny.
+:::
+
+# A short walk around
+
+## Install Quarto
+
+![](img/install_quarto.gif){fig-align="center"}
+
+## Create a Quarto File in a project we already have
+
+![](img/create_qmd_file.png){fig-align="center"}
+
+## Create a New Quarto Project
+
+![](img/new_project_wizard_quarto.png){fig-align="left"}
+
+## Folder structure in a Quarto Project
+
+![](img/quarto_project_schema.png)
+
+::: notes
+When we create a Quarto project we'll automatically create RPorj file (as in any other Quarto project) and a .yml file (for the entire project), my Quarto document (the one that has the .qmd extension.
+:::
+
+## Quarto file general structure
+
+![](img/quart-html-file-1.png)
+
+::: notes
+For those of you have worked with RMarkdown before this should be familiar, at the top we have a YAML with some metadata about our file, like the title, format (we'll start by an html)
+:::
+
+## Visual mode vs Source mode
+
+![](https://quarto.org/docs/visual-editor/images/visual-editing-switch-modes.png){fig-align="center"}
+
+::: notes
+The Quarto visual editor is currently available as a feature of the [RStudio IDE](https://posit.co/download/rstudio-desktop/). The visual editor will eventually also be made available in standalone form.
+You can switch over the source editor, and things should look pretty familiar to you.
+
+The visual editor where you get a documeny that feels similar to a Google Doc in an app-like notion wehere yjos are a liitle bit more you see-what-you-get.
+
+For example I hace some infromation about the data set and I may want to bold the name if the package.
+
+I can add a link to a website.
+:::
+
+## Visual mode shortcuts
+
+::: columns
+::: {.column width="50%"}
+![](https://quarto.org/docs/visual-editor/images/visual-editing-omni-list.png)
+:::
+
+::: {.column width="50%"}
+![](https://quarto.org/docs/visual-editor/images/visual-editing-omni-math.png)
+:::
+:::
+
+## Insert Code Chuncks
+
+::: notes
+In the same way that we did in RMarkdown we can add chunck codes
+:::
+
+![](img/insert%20code%20chunck.gif) \## Code cuncks options
+
+::: notes
+As is RMarkdown Quarto allows us to control different aspects of how chuncks behaver
+:::
+
+![](img/quarto-code-chunck-options.png)
+
+## Code cuncks options from YAML
+
+![](img/quarto-code-chunck-options-yml.png)
+
+# Quarto for journal articles
+
+## Quarto can
+
+-   be authored in your favorite code editor
+
+-   apply journal styles to your outputs with Quarto extensions
+
+-   orchestrate multiple inputs and outputs with embedded computing using a new Quarto project type: manuscript
+
+-   produce manuscripts in multiple formats (including LaTeX or MS Word formats required by journals), and give readers easy access to all of the formats through a website
+
+-   publish computations from one or more notebooks alongside the manuscript, allowing readers to dive into your code and view it or interact with it in a virtual environment
+
+-   publish to GitHub Pages, Netlify, and more
+
+## Let's get started with a manuscript
+
+### Option 1: Start from scratch
+
+-   Create a Quarto manuscript:
+
+    -   RStudio: New Project \> New Directory \> Quarto Manuscript or
+
+    -   `quarto create project manuscript <name>`
+
+-   Add manuscript content
+
+### Option 2:  Start with a sample from 
+
+<https://quarto.org/docs/manuscripts>
+
+::: callout-tip
+Learn how to Track your project with Git and host on GitHub for happy publishing.
+:::
+
+## How does it look like?
+
+```{=html}
+<iframe src="https://dragonstyle.github.io/submission-quarto-lite-r/" title="La Palma Earthquakes" width="1100px" height="600px"></iframe>
+```
 
 
-# Core Use Cases
+## Your turn!
 
-## Dynamic Documents
+Create a Quarto manuscript 
 
-Generate dynamic output using Python, R, Julia, and Observable. Create reproducible documents that can be regenerated when underlying assumptions or data change.
-
-## Beautiful Publications
-
-Publish high-quality articles, reports, presentations, websites, and books in HTML, PDF, MS Word, ePub, and more. Use a single source document to target multiple formats.
-
-## Scientific Markdown
-
-Pandoc markdown has excellent support for LaTeX equations and citations. Quarto adds extensions for cross-references, figure panels, callouts, advanced page layout, and more.
-
-## Websites and Books
-
-Publish collections of documents as a blog or full website. Create books and manuscripts in both print formats (PDF and MS Word) and online formats (HTML and ePub).
+## Setting 
 
 
-## Interactivity
+What's next?
+Actually dive into the code We've seen that you can peruse the code underlying the figures and tables in the manuscript
 
-Engage readers by adding interactive data exploration to your documents using Jupyter Widgets, htmlwidgets for R, Observable JS, and Shiny.
+What if you wanted to interact with the code -- in a computational environment that's just a click away and that has all the software and packages needed to reproduce the manuscript?
 
+![](img/console-clone-repo.png)
 
-# Academic Production with Quarto Manuscripts
-
-
-
-
-# Tips on Practical Reproducibility: GitHub Integration
-
-
-# Hands-on Coding
-
-
-
-
+::: notes
+As I asume you do noit have experience working with git hub we're gone practice a semi reproductrivble version of how tob worlk with repoductible manuscripts.
+If you are familiarizedf eith github you'll finde the cmplete worknlow in the Quarto documentation iun the Manusucript section.
+:::

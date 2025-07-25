@@ -298,7 +298,7 @@
     "href": "slides.html#lets-get-started-with-a-manuscript",
     "title": "From Code to Paper: Reproducible Research with Quarto",
     "section": "Let’s get started with a manuscript",
-    "text": "Let’s get started with a manuscript\nOption 1: Start from scratch\n\nCreate a Quarto manuscript:\n\nRStudio: New Project &gt; New Directory &gt; Quarto Manuscript or\nquarto create project manuscript &lt;name&gt;\n\nAdd manuscript content\n\nOption 2: Start with a sample from\nhttps://quarto.org/docs/manuscripts\n\n\n\n\n\n\nTip\n\n\nLearn how to Track your project with Git and host on GitHub for happy publishing."
+    "text": "Let’s get started with a manuscript\nOption 1: Start from scratch\n\nin your terminal write quarto create project manuscript &lt;name&gt;\n\n\n\nAdd manuscript content\n\nOption 2: Start with a sample from\nhttps://quarto.org/docs/manuscripts\n\n\n\n\n\n\nTip\n\n\nLearn how to Track your project with Git and host on GitHub for happy publishing."
   },
   {
     "objectID": "slides.html#how-does-it-look-like",
@@ -312,7 +312,7 @@
     "href": "slides.html#your-turn",
     "title": "From Code to Paper: Reproducible Research with Quarto",
     "section": "Your turn!",
-    "text": "Your turn!\nCreate a Quarto manuscript"
+    "text": "Your turn!\nCreate a Quarto manuscript from your terminal\n\nTake a look at"
   },
   {
     "objectID": "slides.html#setting",
@@ -320,5 +320,26 @@
     "title": "From Code to Paper: Reproducible Research with Quarto",
     "section": "Setting",
     "text": "Setting\nWhat’s next? Actually dive into the code We’ve seen that you can peruse the code underlying the figures and tables in the manuscript\nWhat if you wanted to interact with the code – in a computational environment that’s just a click away and that has all the software and packages needed to reproduce the manuscript?\n\n\nAs I asume you do noit have experience working with git hub we’re gone practice a semi reproductrivble version of how tob worlk with repoductible manuscripts. If you are familiarizedf eith github you’ll finde the cmplete worknlow in the Quarto documentation iun the Manusucript section."
+  },
+  {
+    "objectID": "slides.html#quarto-manuscript-folder-structure",
+    "href": "slides.html#quarto-manuscript-folder-structure",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "Quarto manuscript folder structure",
+    "text": "Quarto manuscript folder structure"
+  },
+  {
+    "objectID": "slides.html#the-manuscript-_quarto.yml",
+    "href": "slides.html#the-manuscript-_quarto.yml",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "The manuscript _quarto.yml",
+    "text": "The manuscript _quarto.yml\n\nproject:\n  type: manuscript\n\nmanuscript:\n  article: index.qmd\n\nformat:\n  html:\n    comments:\n      hypothesis: true\n  docx: default\n  jats: default\n\n  # (other formats)\n  # pdf: default\n\nexecute:\n  freeze: true"
+  },
+  {
+    "objectID": "slides.html#how-does-it-look-like-once-render",
+    "href": "slides.html#how-does-it-look-like-once-render",
+    "title": "From Code to Paper: Reproducible Research with Quarto",
+    "section": "How does it look like once render?",
+    "text": "How does it look like once render?"
   }
 ]

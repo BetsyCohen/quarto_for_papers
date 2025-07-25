@@ -68,6 +68,7 @@ This presentation is based on:
 -   Quarto for Academics [video](https://www.youtube.com/watch?v=EbAAmrB0luA&list=PL8se4oifL2ThKAU95XXjThAcuCqJr--8I&index=10) on YouTube by Mine Çetinkaya-Rundel and Posit
 
 -   The Turing Way Community, & Scriberia.
+
     (2024) on https://book.the-turing-way.org/
 
 # Why Reproducibility?
@@ -335,15 +336,14 @@ As is RMarkdown Quarto allows us to control different aspects of how chuncks beh
 
 ### Option 1: Start from scratch
 
--   Create a Quarto manuscript:
+-   in your terminal write `quarto create project manuscript <name>`
 
-    -   RStudio: New Project \> New Directory \> Quarto Manuscript or
-
-    -   `quarto create project manuscript <name>`
-
+```{=html}
+<!-- -->
+```
 -   Add manuscript content
 
-### Option 2:  Start with a sample from 
+### Option 2: Start with a sample from
 
 <https://quarto.org/docs/manuscripts>
 
@@ -351,19 +351,54 @@ As is RMarkdown Quarto allows us to control different aspects of how chuncks beh
 Learn how to Track your project with Git and host on GitHub for happy publishing.
 :::
 
-## How does it look like?
+## Quarto manuscript folder structure
+
+![](img/manuscript-project-created.png)
+
+## The manuscript \_quarto.yml 
+
+```{r}
+#| label: manuscript_quarto_yml
+#| echo: true
+#| eval: false
+
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    comments:
+      hypothesis: true
+  docx: default
+  jats: default
+
+  # (other formats)
+  # pdf: default
+
+execute:
+  freeze: true
+
+```
+
+<!--# seguir el ejercicio desde https://youtu.be/NK1onTLcgY4?si=q-SmrT8qLB1s2V1J&t=1228 -->
+
+## How does it look like once render?
 
 ```{=html}
 <iframe src="https://dragonstyle.github.io/submission-quarto-lite-r/" title="La Palma Earthquakes" width="1100px" height="600px"></iframe>
 ```
-
-
 ## Your turn!
 
-Create a Quarto manuscript 
+Create a Quarto manuscript from your terminal
 
-## Setting 
+![](img/create-project-from-terminal.png)
 
+Take a look at
+
+## Setting
 
 What's next?
 Actually dive into the code We've seen that you can peruse the code underlying the figures and tables in the manuscript
